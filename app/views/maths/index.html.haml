@@ -1,6 +1,21 @@
 .col-md-8
   %h1 Калькулятор
-  %p Реализация калькулятора
+  %p Клиент-серверный калькулятор. Пользоваться очень просто:
+  %ul
+    %li Введите выражение кнопками
+    %li
+      Нажмите
+      %span.label.label-success =
+    %li
+      Готово! А если нет, нажмите
+      %span.label.label-danger С
+      и пробуйте дальше.
+  %p Реализовано с помощью:
+  %ul
+    %li Ruby 2.2
+    %li Rails 4.2
+    %li
+      %code math_engine
 .col-md-4#calculator
   .row
     .col-xs-12#input
