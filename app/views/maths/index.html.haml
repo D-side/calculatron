@@ -1,0 +1,24 @@
+.col-md-8
+  %h1 Калькулятор
+  %p Реализация калькулятора
+.col-md-4#calculator
+  .row
+    .col-xs-12#input
+  .row
+    - '+-*/'.each_char do |c|
+      %a.col-xs-3.btn.btn-warning{ data: { input: true,
+                                           value: c } }= c
+  .row
+    - '1234567890'.each_char do |c|
+      %a.col-xs-3.btn.btn-primary{ data: { input: true,
+                                        value: c } }= c
+    %a.col-xs-3.btn.btn-info{ data: { input: true,
+                                      value: '.' } } .
+  .row
+    - '()'.each_char do |c|
+      %a.col-xs-3.btn.btn-default{ data: { input: true,
+                                        value: c } }= c
+  .row
+    %a.col-xs-3.btn.btn-danger{ data: { clear: true } } C
+    %a.col-xs-3.btn.btn-success{ data: { submit: true,
+                                         path: calculate_path } } =
